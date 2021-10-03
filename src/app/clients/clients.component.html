@@ -1,0 +1,18 @@
+<ul class="list-group" style="width: 75%;margin: auto">
+    <li class="list-group-item" *ngFor="let client of clients">
+      <div style="float: left;">
+        <p >
+          {{client.username}}
+          {{client.firstname}}
+        </p>
+      </div>
+      <div style="margin-left: 85%" >        
+        <button type="button" class="btn btn-danger"
+       
+        (click)="goDetail(client.id)" >Détail</button>
+      </div>
+        
+        
+        
+    </li>
+  </ul>

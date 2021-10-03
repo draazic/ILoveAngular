@@ -1,0 +1,28 @@
+<div class="card mt-4">
+    <h4 class="card-header">You're logged</h4>
+    <div class="card-body">
+        <h6>Users</h6>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="users">
+            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+        </ul>
+    </div>
+
+    <!-- <div>
+        <input type="file" (change)="fileChangeEvent($event)" />
+
+                <image-cropper
+            [imageChangedEvent]="imageChangedEvent"
+            [maintainAspectRatio]="true"
+            [aspectRatio]="4 / 3"
+            [resizeToWidth]="256"
+            format="png"
+            (imageCropped)="imageCropped($event)"
+            (imageLoaded)="imageLoaded()"
+            (cropperReady)="cropperReady()"
+            (loadImageFailed)="loadImageFailed()"
+                ></image-cropper>
+
+        <img [src]="croppedImage" />
+    </div> -->
+</div>
